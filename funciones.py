@@ -7,9 +7,9 @@ dt = datetime.now()
 fecha_Año = str(dt.year)
 fecha_Mes = str(dt.month)
 fecha_Dia = str(dt.day)
-ruta_Año = "/home/cristian/Codigos/Prueba/" + fecha_Año
-ruta_Mes = "/home/cristian/Codigos/Prueba/" + fecha_Año + "/" + fecha_Mes
-ruta_Dia = "/home/cristian/Codigos/Prueba/" + fecha_Año + "/" + fecha_Mes + "/" + fecha_Dia
+ruta_Año = "/opt/home/cristian.gil/Prueba/" + fecha_Año
+ruta_Mes = "/opt/home/cristian.gil/Prueba/" + fecha_Año + "/" + fecha_Mes
+ruta_Dia = "/opt/home/cristian.gil/Prueba/" + fecha_Año + "/" + fecha_Mes + "/" + fecha_Dia
 
 def validar_Ruta_Año (ruta_Año):
     if os.path.isdir(ruta_Año):
@@ -81,5 +81,4 @@ def validar_Ruta_Año (ruta_Año):
             print("La creación del directorio %s falló" % ruta_Año)
         else:
             print("Se ha creado el directorio: %s " % ruta_Año)
-            
 print(validar_Ruta_Año(ruta_Año))
